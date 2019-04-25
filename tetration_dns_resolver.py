@@ -72,7 +72,7 @@ parser.add_argument('--url', help='Tetration URL', required=False)
 parser.add_argument('--credential', help='Path to Tetration json credential file', required=False)
 parser.add_argument('--annotation', help='User Annotation Field for tracking hostname', required=False)
 parser.add_argument('--scope', help='Target scope for DNS resolution', required=False)
-parser.add_argument('--limit', help='Results limit for inventory search', required=False)
+parser.add_argument('--limit', help='Results limit for inventory search', type=int, required=False)
 args = parser.parse_args()
 
 TETRATION_API_URL = args.url if args.url else TETRATION_API_URL
